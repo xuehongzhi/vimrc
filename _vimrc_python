@@ -1,0 +1,19 @@
+let g:plugins=['python-mode/python-mode', 'Valloric/YouCompleteMe', 'joonty/vdebug']
+"let g:pymode_python = 'python3'
+let g:pymode_options_max_line_length = 96
+let g:pymode_folding = 0
+let g:pymode_lint=1
+let g:pymode_indent=1
+source $VIM/_vimrc
+colorscheme hybrid_reverse
+function! Clbuf(bufno)
+    if(getbufvar(a:bufno, '&buftype')=='quickfix')
+        let cmd = a:bufno."bd"
+        echo cmd 
+	exe cmd
+    endif
+endfunction
+
+noremap bl :call map(range(1, bufnr('$')), 'Clbuf(bufnr(v:val))')<CR>
+
+

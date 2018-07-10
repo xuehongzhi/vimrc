@@ -1,0 +1,4 @@
+let g:plugins=['chrisbra/csv.vim', 'elzr/vim-json']
+source $VIM\_vimrc
+let g:csv_highlight_column = 'y'
+set nu

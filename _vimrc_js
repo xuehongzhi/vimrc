@@ -1,0 +1,3 @@
+let g:plugins=['moll/vim-node', 'Valloric/YouCompleteMe', 'marijnh/tern_for_vim']
+source $VIM\_vimrc
+colorscheme molokai
